@@ -1,15 +1,19 @@
 #include<stdio.h>
+void england(){
+    printf("\nyou are in england");
+    return;
+}
+void australia(){
+    printf("\nyou are in australia");
+    england();
+    return;
+}
+void india(){
+    printf("\nyou are in india");
+    australia();
+    return;
+}
 int main(){
-    int n;
-    printf("enter no. of rows: ");
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        int a=1;
-        for(int j=1;j<=i;j++){
-            printf(" %d ",a);
-            a=a+1;
-        }
-        printf("\n");
-    }
+    india();
     return 0;
 }

@@ -1,5 +1,10 @@
 #include<stdio.h>
+void greet(){
+    printf("hello bro");
+    return;
+}
 int main(){
-    printf("hello world ");
+    void greet();
+    greet();
     return 0;
 }
