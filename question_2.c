@@ -1,15 +1,19 @@
 #include<stdio.h>
 int main(){
     int n;
-    printf("enter no. of rows: ");
+    printf("enter a number: ");
     scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        int a=1;
-        for(int j=1;j<=(n+1)-i;j++){
-            printf(" %d ",a);
-            a=a+1;
+    int arr[n];
+    int a=1;
+    for(int i=0;i<=n-1;i++){
+        printf("enter marks of %dst student: ",a);
+        scanf("%d",&arr[i]);
+        a++;
         }
-        printf("\n");
+        for(int i=0;i<=n-1;i++){
+            if(arr[i]<35){
+                printf("%d ",i);
+            }
     }
     return 0;
 }

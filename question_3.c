@@ -1,18 +1,25 @@
 #include<stdio.h>
 int main(){
     int n;
-    printf("enter no. of rows: ");
+    printf("enter a number: ");
     scanf("%d",&n);
-    int m;
-    printf("enter no. of column: ");
-    scanf("%d",&m);
-    for(int i=1;i<=n;i++){
-        int a=1;
-        for(int j=1;j<=m;j=j+1){
-            printf(" %d ",a);
-            a=a+2;
+    int arr[n];
+    for(int i=0;i<=n-1;i++){
+        printf("enter elements: ");
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<=n-1;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    for(int i=0;i<=n-1;i++){
+        if(i%2!=0){
+            arr[i]=arr[i]*2;
         }
-        printf("\n");
+        else{
+            arr[i]=arr[i]+10;
+        }
+        printf("%d ",arr[i]);
     }
     return 0;
 }

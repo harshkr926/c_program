@@ -1,19 +1,14 @@
 #include<stdio.h>
-void england(){
-    printf("\nyou are in england");
-    return;
-}
-void australia(){
-    printf("\nyou are in australia");
-    england();
-    return;
-}
-void india(){
-    printf("\nyou are in india");
-    australia();
-    return;
-}
 int main(){
-    india();
+    int arr[5];
+    int a=1;
+    for(int i=0;i<=4;i++){
+        printf("enter %dst element: ",a);
+        scanf("%d",&arr[i]);
+        a++;
+    }
+    for(int i=0;i<=4;i++){
+        printf("%d ",arr[4-i]);
+    }
     return 0;
 }
